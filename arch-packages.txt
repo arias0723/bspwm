@@ -54,6 +54,7 @@ pulseaudio
 pavucontrol
 
 # Utils
+firefox
 git
 vim
 wget
