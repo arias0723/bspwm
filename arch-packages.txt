@@ -49,6 +49,7 @@ gvfs-mtp
 gvfs-nfs
 gvfs-smb
 networkmanager
+nm-connection-editor
 polkit-gnome
 pulseaudio
 pavucontrol
