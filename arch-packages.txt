@@ -33,12 +33,12 @@ xbindkeys
 xclip
 xcursor-neutral
 xed
+xf86-video
 xorg
 xorg-xbacklight
 xorg-xdpyinfo
 xorg-xinit
 xorg-xsetroot
-#xf86-video-qxl
 
 # Services
 acpi
