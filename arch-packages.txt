@@ -18,7 +18,7 @@ lightdm
 lightdm-slick-greeter
 lxappearance-gtk3
 nitrogen
-#picom
+picom
 polybar
 rofi
 scrot
@@ -36,6 +36,7 @@ xed
 xf86-video-intel
 xf86-video-nouveau
 xf86-video-qxl
+xf86-video-vmware
 xorg
 xorg-xbacklight
 xorg-xdpyinfo

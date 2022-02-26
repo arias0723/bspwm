@@ -21,6 +21,7 @@ bspc rule -a mplayer2 state=floating
 bspc rule -a Yad state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
+bspc rule -a Pavucontrol state=floating rectangle 200x200+50+50 sticky=off
 
 
 # Border
@@ -44,8 +45,8 @@ nitrogen --restore &
 # Dex
 dex -a -s /etc/xdg/autostart/:~/.config/autostart/  
 # Picom
-#picom -f &
-picom --experimental-backends &
+picom -f &
+#picom --experimental-backends &
 # Network Applet
 #nm-applet --indicator &
 

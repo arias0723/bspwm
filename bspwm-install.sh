@@ -16,7 +16,7 @@ chmod -R +x ~/.screenlayout
 
 packages=`grep -vE "^#" arch-packages.txt` 
 sudo pacman -Syu --needed --noconfirm $packages
-sudo yay -S --nodiffmenu --noremovemake --answerclean All --noconfirm picom-ibhagwan-git
+# yay -S --nodiffmenu --noremovemake --answerclean All --noconfirm picom-ibhagwan-git
 
 sudo systemctl enable NetworkManager.service
 sudo fc-cache -f -v
