@@ -7,6 +7,7 @@ mkdir ~/Pictures
 
 cp IosevkaTermNerdFontComplete.ttf ~/.local/share/fonts
 cp wallpapers/* ~/Pictures
+cp .xinitrc ~/
 cp -R .config/* ~/.config/
 cp -R .screenlayout ~/
 chmod -R +x ~/.config/bspwm
