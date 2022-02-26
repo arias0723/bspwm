@@ -12,7 +12,6 @@ bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 bspc config pointer_follows_focus true
 bspc config focus_follows_pointer true
-bspc config border_radius 10
 
 bspc rule -a Gimp desktop='^8' state=floating follow=on
 bspc rule -a Chromium desktop='^2'
@@ -21,13 +20,16 @@ bspc rule -a mplayer2 state=floating
 bspc rule -a Yad state=floating
 bspc rule -a Kupfer.py focus=on
 bspc rule -a Screenkey manage=off
-bspc rule -a Pavucontrol state=floating rectangle 200x200+50+50 sticky=off
+bspc rule -a Pavucontrol state=floating rectangle 500x400+100+100 sticky=off
+bspc rule -a Nm-connection-editor state=floating rectangle 500x400+100+100 sticky=off
 
 
 # Border
 bspc config focused_border_color        "#6c71c4"
 bspc config normal_border_color         "#073642"
 bspc config active_border_color         "#073642"
+#bspc config border_radius 10
+
 
 #
 # Autostart
