@@ -44,8 +44,8 @@ nitrogen --restore &
 # Dex
 dex -a -s /etc/xdg/autostart/:~/.config/autostart/  
 # Picom
-picom -f &
-# picom -CGb &
+#picom -f &
+picom --experimental-backends &
 # Network Applet
 #nm-applet --indicator &
 
