@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Init
+CURRENT_USER=$(cat /etc/passwd | grep "/home" |cut -d: -f1 |head -1)
 INSTALL_PACKAGES=`grep -vE "^#" arch-packages.txt`
 mkdir -p ~/.config
 mkdir -p ~/.local/share/fonts
@@ -15,6 +16,7 @@ cp -R .config/. ~/.config/
 cp -R .screenlayout ~/
 cp -R wallpapers/. ~/Pictures
 cp .xinitrc ~/
+cp .gtkrc-2.0 ~/
 cp IosevkaTermNerdFontComplete.ttf ~/.local/share/fonts
 chmod -R +x ~/.config/bspwm
 chmod -R +x ~/.config/polybar/scripts

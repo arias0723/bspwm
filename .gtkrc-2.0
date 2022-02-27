@@ -1,11 +1,11 @@
 # DO NOT EDIT! This file will be overwritten by LXAppearance.
 # Any customization should be done in ~/.gtkrc-2.0.mine instead.
 
-include "~/.gtkrc-2.0.mine"
+include "/home/ghost/.gtkrc-2.0.mine"
 gtk-theme-name="Arc-Dark"
-gtk-icon-theme-name="Qogir-dark"
+gtk-icon-theme-name="Arc-X-D"
 gtk-font-name="Noto Sans 10"
-gtk-cursor-theme-name="Qogir-dark"
+gtk-cursor-theme-name="capitaine-cursors-light"
 gtk-cursor-theme-size=0
 gtk-toolbar-style=GTK_TOOLBAR_BOTH_HORIZ
 gtk-toolbar-icon-size=GTK_ICON_SIZE_LARGE_TOOLBAR
