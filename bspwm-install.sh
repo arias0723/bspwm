@@ -11,11 +11,11 @@ sudo pacman -Syu --needed --noconfirm $INSTALL_PACKAGES
 # yay -S --nodiffmenu --noremovemake --answerclean All --noconfirm picom-ibhagwan-git
 
 # WM cfg
-cp IosevkaTermNerdFontComplete.ttf ~/.local/share/fonts
-cp wallpapers/. ~/Pictures
-cp .xinitrc ~/
 cp -R .config/. ~/.config/
 cp -R .screenlayout ~/
+cp -R wallpapers/. ~/Pictures
+cp .xinitrc ~/
+cp IosevkaTermNerdFontComplete.ttf ~/.local/share/fonts
 chmod -R +x ~/.config/bspwm
 chmod -R +x ~/.config/polybar/scripts
 chmod -R +x ~/.screenlayout
