@@ -1,10 +1,16 @@
 #!/bin/bash
 
-# Easy setup for testing
+# Init
+INSTALL_PACKAGES=`grep -vE "^#" arch-packages.txt`
 mkdir -p ~/.config
 mkdir -p ~/.local/share/fonts
 mkdir ~/Pictures
 
+# Install base packages
+sudo pacman -Syu --needed --noconfirm $INSTALL_PACKAGES
+# yay -S --nodiffmenu --noremovemake --answerclean All --noconfirm picom-ibhagwan-git
+
+# WM cfg
 cp IosevkaTermNerdFontComplete.ttf ~/.local/share/fonts
 cp wallpapers/* ~/Pictures
 cp .xinitrc ~/
@@ -14,10 +20,15 @@ chmod -R +x ~/.config/bspwm
 chmod -R +x ~/.config/polybar/scripts
 chmod -R +x ~/.screenlayout
 
-packages=`grep -vE "^#" arch-packages.txt` 
-sudo pacman -Syu --needed --noconfirm $packages
-# yay -S --nodiffmenu --noremovemake --answerclean All --noconfirm picom-ibhagwan-git
+# ZSH cfg
+cp -R resources/zsh/theme/* ~/
+sudo cp -R resources/zsh/theme/* /root
+sudo cp -R resources/zsh/plugins/* ~/ /usr/share
+sudo ln -s -f ~/.zshrc /root/.zshrc
+sudo usermod --shell /usr/bin/zsh ghost
+sudo usermod --shell /usr/bin/zsh root
 
+# Misc
 sudo systemctl enable NetworkManager.service
 sudo fc-cache -f -v
 dbus-launch dconf load / < xed.dconf
