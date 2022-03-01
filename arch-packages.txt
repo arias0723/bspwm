@@ -2,7 +2,7 @@
 arandr
 arc-gtk-theme-eos
 arc-x-icons-theme
-#archlinux-xdg-menu
+archlinux-xdg-menu
 bspwm
 capitaine-cursors
 dex
@@ -59,8 +59,11 @@ pulseaudio
 pavucontrol
 
 # Utils
+bat
 firefox
+fzf
 git
+lsd
 vim
 wget
 zsh

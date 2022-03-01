@@ -35,7 +35,7 @@ zstyle ':autocomplete:tab:*' widget-style menu-select
 zstyle ':autocomplete:*' min-input 2
 bindkey $key[Up] up-line-or-history
 bindkey $key[Down] down-line-or-history
-
+bindkey "^[[3~" delete-char
 
 ##################################################
 # Fish like syntax highlighting
