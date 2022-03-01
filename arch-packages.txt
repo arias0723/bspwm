@@ -58,13 +58,14 @@ pulseaudio
 pavucontrol
 
 # Utils
-alacaritty
+alacritty
 bat
 firefox
 fzf
 git
 lsd
 neovim
+tmux
 wget
 yay
 zsh
