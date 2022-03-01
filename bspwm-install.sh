@@ -17,6 +17,8 @@ cp -R .screenlayout ~/
 cp -R wallpapers/. ~/Pictures
 cp .xinitrc ~/
 cp .gtkrc-2.0 ~/
+cp .tmux.conf ~/
+cp .tmux.conf.local ~/
 cp IosevkaTermNerdFontComplete.ttf ~/.local/share/fonts
 chmod -R +x ~/.config/bspwm
 chmod -R +x ~/.config/polybar/scripts

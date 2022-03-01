@@ -64,7 +64,7 @@ firefox
 fzf
 git
 lsd
-vim
+neovim
 wget
 zsh
 
