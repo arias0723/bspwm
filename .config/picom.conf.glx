@@ -12,7 +12,7 @@ shadow = false;
 
 # The blur radius for shadows, in pixels. (defaults to 12)
 # shadow-radius = 12
-#shadow-radius = 7;
+shadow-radius = 7;
 
 # The opacity of shadows. (0.0 - 1.0, defaults to 0.75)
 # shadow-opacity = .75
@@ -165,8 +165,8 @@ focus-exclude = [ "class_g = 'Cairo-clock'" ];
 
 # Parameters for background blurring, see the *BLUR* section for more information.
 # blur-method = 
-#blur-method = "dual_kawase"
-#blur-size = 30
+blur-method = "dual_kawase"
+blur-size = 30
 #
 # blur-deviation = false
 
@@ -193,16 +193,16 @@ focus-exclude = [ "class_g = 'Cairo-clock'" ];
 #   blur-kern = "5,5,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1";
 #
 # blur-kern = ''
-#blur-kern = "11x11gaussian";
+blur-kern = "11x11gaussian";
 
 
 # Exclude conditions for background blur.
 # blur-background-exclude = []
-#blur-background-exclude = [
-#  "window_type = 'dock'",
-#  "window_type = 'desktop'",
-#  "_GTK_FRAME_EXTENTS@:c"
-#];
+blur-background-exclude = [
+  "window_type = 'dock'",
+  "window_type = 'desktop'",
+  "_GTK_FRAME_EXTENTS@:c"
+];
 
 #################################
 #       General Settings        #
@@ -215,11 +215,11 @@ focus-exclude = [ "class_g = 'Cairo-clock'" ];
 # `xrender` is the default one.
 #
 # backend = 'glx'
-backend = "xrender";
+backend = "glx";
 
 # Enable/disable VSync.
-vsync = false
-#vsync = true
+#vsync = false
+vsync = true
 
 # Enable remote control via D-Bus. See the *D-BUS API* section below for more details.
 # dbus = false
