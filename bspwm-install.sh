@@ -9,7 +9,7 @@ mkdir ~/Pictures
 
 # Install base packages
 sudo pacman -Syu --needed --noconfirm $INSTALL_PACKAGES
-# yay -S --nodiffmenu --noremovemake --answerclean All --noconfirm picom-ibhagwan-git
+yay -S --nodiffmenu --noremovemake --answerclean All --noconfirm picom-ibhagwan-git
 
 # WM cfg
 cp -R .config/. ~/.config/
@@ -23,6 +23,7 @@ cp IosevkaTermNerdFontComplete.ttf ~/.local/share/fonts
 chmod -R +x ~/.config/bspwm
 chmod -R +x ~/.config/polybar/scripts
 chmod -R +x ~/.screenlayout
+chmod +x ~/.xinitrc
 
 # ZSH cfg
 cp -R resources/zsh/theme/. ~/
