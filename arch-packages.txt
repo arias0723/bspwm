@@ -20,7 +20,7 @@ lxappearance-gtk3
 lxsession
 nitrogen
 #picom
-polybar
+#polybar
 rofi
 scrot
 sxhkd
