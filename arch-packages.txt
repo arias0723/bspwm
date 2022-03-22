@@ -13,7 +13,6 @@ feh
 file-roller
 #gtk-engine-murrine
 #i3lock
-#jq
 #lightdm
 #lightdm-slick-greeter
 lxappearance-gtk3
@@ -63,8 +62,10 @@ bat
 firefox
 fzf
 git
+jq
 lsd
 neovim
+pacman-contrib
 tmux
 wget
 yay

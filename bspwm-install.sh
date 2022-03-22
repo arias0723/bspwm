@@ -15,11 +15,11 @@ yay -S --nodiffmenu --noremovemake --answerclean All --noconfirm picom-ibhagwan-
 cp -R .config/. ~/.config/
 cp -R .screenlayout ~/
 cp -R wallpapers/. ~/Pictures
+cp -R resources/fonts/. ~/.local/share/fonts
 cp .xinitrc ~/
 cp .gtkrc-2.0 ~/
 cp .tmux.conf ~/
 cp .tmux.conf.local ~/
-cp IosevkaTermNerdFontComplete.ttf ~/.local/share/fonts
 chmod -R +x ~/.config/bspwm
 chmod -R +x ~/.config/polybar/scripts
 chmod -R +x ~/.screenlayout

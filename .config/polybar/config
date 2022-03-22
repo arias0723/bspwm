@@ -1,0 +1,383 @@
+;     ___      _       _
+;    / _ \___ | |_   _| |__   __ _ _ __ 
+;   / /_)/ _ \| | | | | '_ \ / _` | '__|
+;  / ___/ (_) | | |_| | |_) | (_| | |   
+;  \/    \___/|_|\__, |_.__/ \__,_|_|   
+;                |___/          
+
+[colors]
+red        = #BF616A
+darkred    = #BF616A
+green      = #A3BE8C
+darkgreen  = #A3BE8C
+yellow     = #EBCB8B
+darkyellow = #cfb072
+blue_1     = #9eb3cd
+blue_2     = #8ea6c4
+blue_3     = #7e9abc
+blue_4     = #6e8db4
+blue_5     = #5e81ac
+blue_6     = #384d67
+purple     = #B48EAD
+darkpurple = #9f6f96
+cyan       = #88C0D0
+darkcyan   = #88C0D0
+foreground = #D8DEE9
+background = #2E3440
+alt        = #434C5E
+
+[module/sep]
+type = custom/text
+content = " "
+content-background = ${colors.background}
+content-foreground = ${colors.background}
+
+; ==== APPLICATION MENU ====
+
+[module/apps]
+type = custom/text
+content = "%{T6} %{T-}"
+content-background = ${colors.background}
+content-foreground = ${colors.blue_5}
+click-left="rofi -show drun -theme applications -show-icons"
+
+; ==== RUNNING APP ====
+
+[module/running_program]
+type = custom/script
+format = "<label>"
+format-background = ${colors.background}
+format-foreground = ${colors.darkpurple}
+exec = "~/.config/polybar/scripts/running_program.sh"
+interval = 0
+
+[module/layout]
+type = custom/script
+format = "<label>"
+format-background = ${colors.background}
+format-foreground = ${colors.darkpurple}
+exec = "~/.config/polybar/scripts/bspc_layout.sh"
+interval = 0
+
+[module/tabbed]
+type = custom/script
+format = "<label>"
+format-background = ${colors.background}
+format-foreground = ${colors.darkpurple}
+exec = "~/.config/polybar/scripts/bspc_tabbed.sh"
+interval = 0
+
+; ==== CHECK FOR UPDATES ====
+
+[module/updates]
+type = custom/script
+format = "<label>"
+format-prefix = "%{T7}%{T-}%{T1} %{T-}"
+format-prefix-background = ${colors.background}
+format-prefix-foreground = ${colors.yellow}
+format-background = ${colors.background}
+format-foreground = ${colors.yellow}
+exec = "~/.config/polybar/scripts/checkupdates.sh"
+
+; ==== WORKSPACES ==================================================================
+
+[module/bspwm]
+type = internal/bspwm
+
+; Only show workspaces defined on the same output as the bar
+; NOTE: The bspwm and XRandR monitor names must match, which they do by default.
+; But if you rename your bspwm monitors with bspc -n this option will no longer
+; behave correctly.
+; Default: true
+pin-workspaces = false
+inline-mode = false
+enable-click = true
+
+enable-scroll = false
+reverse-scroll = false
+fuzzy-match = false
+occupied-scroll = false
+ws-icon-0 = 1;%{T7}◆%{T-}
+ws-icon-1 = 2;%{T7}◆%{T-}
+ws-icon-2 = 3;%{T7}◆%{T-}
+ws-icon-3 = 4;%{T7}◆%{T-}
+ws-icon-4 = 5;%{T7}◆%{T-}
+ws-icon-5 = 6;%{T7}◆%{T-}
+icon-default = 
+format = <label-state>
+
+label-focused = "%{T4}◆%{T-}"
+label-occupied = %icon%
+label-urgent = %icon%
+label-empty = %icon%
+
+label-dimmed-focused-foreground = ${colors.blue_4}
+
+label-focused-foreground   = ${colors.blue_2}
+label-urgent-foreground    = ${colors.blue_6}
+label-empty-foreground     = ${colors.blue_6}
+label-occupied-foreground  = ${colors.blue_4}
+
+label-focused-background = ${colors.background}
+label-urgent-background  = ${colors.background}
+label-empty-background   = ${colors.background}
+
+
+label-occupied-padding = 2
+label-empty-padding = 2
+label-urgent-padding = 2
+label-focused-padding = 2
+
+; ==== WORKSPACES ==================================================================
+[module/workspaces]
+type = internal/xworkspaces
+pin-workspaces = false
+enable-click = true
+enable-scroll = true
+
+icon-0 = 1;%{T7}%{T-}
+icon-1 = 2;%{T7}%{T-}
+icon-2 = 3;%{T7}%{T-}
+icon-3 = 4;%{T7}%{T-}
+icon-4 = 5;%{T7}%{T-}
+icon-5 = 6;%{T7}%{T-}
+icon-default = 
+label-active-underline = ${colors.alt}
+
+format = <label-state>
+label-active = "%{T7}%{T-}"
+label-occupied = %{T7}%{F#5e81ac}%{F-}%{T-}
+label-urgent = %{T7}%{F#5e81ac}%{F-}%{T-}
+label-empty = %{T7}%{F#5e81ac}%{F-}%{T-}
+
+label-occupied-padding = 2
+label-empty-padding = 2
+label-urgent-padding = 2
+label-active-padding = 2
+
+icon-0-foreground = ${colors.background}
+
+label-active-foreground =   ${colors.blue_2}
+label-urgent-foreground =   ${colors.blue_7}
+label-empty-foreground =    ${colors.blue_7}
+label-occupied-foreground = ${colors.blue_7}
+
+label-active-background =   ${colors.background}
+label-urgent-background =   ${colors.background}
+label-empty-background =    ${colors.background}
+label-occupied-background = ${colors.background}
+
+; ==== VOLUME ======================================================================
+[module/volume]
+type = custom/script
+interval = 0
+format = <label>
+format-prefix = " "
+format-prefix-foreground = ${colors.yellow}
+format-prefix-background = ${colors.alt}
+format-foreground = ${colors.yellow}
+format-background = ${colors.alt}
+;exec = bar volume
+
+[module/pulseaudio]
+type = internal/pulseaudio
+
+; Sink to be used, if it exists (find using `pacmd list-sinks`, name field)
+; If not, uses default sink
+; sink = alsa_output.pci-0000_12_00.3.analog-stereo
+; sink = alsa_output.pci-0000_00_1b.0.analog-stereo
+
+; Use PA_VOLUME_UI_MAX (~153%) if true, or PA_VOLUME_NORM (100%) if false
+; Default: true
+use-ui-max = false
+
+; Interval for volume increase/decrease (in percent points)
+; Default: 5
+interval = 5
+
+; Available tags:
+;   <label-volume> (default)
+;   <ramp-volume>
+;   <bar-volume>
+format-volume = <ramp-volume>
+
+; Available tags:
+;   <label-muted> (default)
+;   <ramp-volume>
+;   <bar-volume>
+format-muted = <label-muted>
+
+; Available tokens:
+;   %percentage% (default)
+;   %decibels% (unreleased)
+label-volume = %{T7}墳%{T-}
+label-volume-foreground = ${colors.green}
+
+; Available tokens:
+;   %percentage% (default)
+;   %decibels% (unreleased)
+label-muted = %{T7}婢%{T-}
+label-muted-foreground = ${colors.green}
+
+; Only applies if <ramp-volume> is used
+ramp-volume-0 = %{T7}奄%{T-}
+ramp-volume-1 = %{T7}奔%{T-}
+ramp-volume-2 = %{T7}墳%{T-}
+ramp-volume-foreground = ${colors.green}
+
+; Right and Middle click (unreleased)
+click-right = pavucontrol &
+; click-middle =
+
+; ==== MIC ========================================================================
+[module/mic]
+type = custom/script
+format = <label>
+#format-prefix = " "
+format-prefix-foreground = ${colors.blue_5}
+format-prefix-background = ${colors.background}
+format-foreground = ${colors.blue_5}
+format-background = ${colors.background}
+label-font = 5
+interval = 0
+exec = "~/.config/polybar/scripts/microphone_icon.sh"
+tail = true
+
+
+; ==== BATTERY =============================================================
+[module/battery]
+type = internal/battery
+battery = BAT0
+adapter = ADP1
+full-at = 98
+ 
+format-charging = <animation-charging> <label-charging>
+format-charging-underline = #ffb52a
+ 
+format-discharging = <animation-discharging> <label-discharging>
+format-discharging-underline = ${self.format-charging-underline}
+ 
+format-full-prefix = " "
+format-full-prefix-foreground = ${colors.foreground-alt}
+format-full-underline = ${self.format-charging-underline}
+ 
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-foreground = ${colors.foreground-alt}
+ 
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-foreground = ${colors.foreground-alt}
+animation-charging-framerate = 750
+ 
+animation-discharging-0 = 
+animation-discharging-1 = 
+animation-discharging-2 = 
+animation-discharging-foreground = ${colors.foreground-alt}
+animation-discharging-framerate = 750
+
+; ==== NETWORK =============================================================
+[module/netstatus]
+type = internal/network
+interface = enp0s3
+interval = 1.0
+label-connected = "%{A3:nm-connection-editor &:}%{T7}%{T-}%{A}"
+label-disconnected = "%{T7}%{T-}"
+label-connected-background = ${colors.background}
+label-connected-foreground = ${colors.blue_1}
+label-disconnected-foreground = ${colors.red}
+
+; ==== DATE AND TIME ===============================================================
+[module/date]
+type = internal/date
+interval = 1.0
+date = %H:%M
+date-alt = %d/%m/%Y
+;format-prefix = " %{T7}%{T-} "
+format-prefix-foreground = ${colors.green}
+format-prefix-background = ${colors.background}
+format-foreground = ${colors.green}
+format-background = ${colors.background}
+
+; ==== POWER MENU ================================================================
+[module/power]
+type = custom/menu
+label-separator = |
+label-separator-margin = 1
+label-open = ""
+label-close = ""
+
+format = <label-toggle> <menu>
+menu-0-0 = ""
+menu-0-0-exec = poweroff
+menu-0-1 = ""
+menu-0-1-exec = reboot
+#format-prefix = " " 
+format-prefix-foreground = ${colors.purple}
+format-prefix-background = ${colors.alt}
+format-foreground = ${colors.purple}
+format-background = ${colors.alt}
+
+; ==== POWER BUTTON ====
+[module/powerbutton]
+type = custom/text
+content = "%{T7}%{T-}"
+content-background = ${colors.background}
+content-foreground = ${colors.purple}
+click-left= "rofi -show keys -theme powermenu -show-icons"
+
+; ==== PULSE ====
+[module/headphone]
+type = internal/pulseaudio
+sink = alsa_output.pci-0000_12_00.3.analog-stereo
+use-ui-max = true
+interval = 5
+format-muted = "  <label-muted>"
+label-muted = "%percentage%"
+format-muted-foreground = ${colors.red}
+format-muted-background = ${colors.background}
+
+format-volume = "  <label-volume>"
+label-volume = "%percentage%"
+format-volume-foreground = ${colors.yellow}
+format-volume-background = ${colors.background}
+
+; ==== SETTINGS ====================================================================
+
+[settings]
+screenchange-reload = true
+
+; ==== BAR =========================================================================
+
+[bar/bar]
+bottom = false
+offset-y = 5
+offset-x = 5
+width = 99.5%
+height = 26
+override-redirect = false
+fixed-center = true
+border-size = 5
+background = ${colors.background}
+border-color = ${colors.background}
+tray-position = right
+tray-padding = 2
+tray-background = ${colors.background}
+wm-restack = bspwm
+cursor-click = pointer
+padding = 1
+
+font-0 = Jetbrainsmono Nerd Font:antialias=true:hinting=true:style=Medium:pixelsize=10;3
+font-1 = Material Icons:size=15:antialias=true:hinting:true;5
+font-2 = Source Han Sans JP,源ノ角ゴシック JP,Source Han Sans JP Medium,源ノ角ゴシック JP Medium:pixelsize=9;3
+font-3 = JetBrainsMono Nerd Font:antialias=true:hinting=true:style=Medium:pixelsize=17;4
+font-4 = JetBrainsMono Nerd Font:antialias=true:hinting=true:style=Medium:pixelsize=50;2
+font-5 = JetBrainsMono Nerd Font:antialias=true:hinting=true:style=Medium:pixelsize=15;4
+font-6 = JetBrainsMono Nerd Font:antialias=true:hinting=true:style=Medium:pixelsize=13;3
+font-7 = JetBrainsMono Nerd Font:antialias=true:hinting=true:style=Medium:pixelsize=8;2
+
+modules-left = apps sep sep ;running_program
+modules-center = layout sep bspwm sep tabbed
+modules-right = updates sep sep netstatus sep mic sep pulseaudio sep sep battery sep date sep sep powerbutton
