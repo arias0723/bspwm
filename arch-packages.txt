@@ -1,6 +1,6 @@
 # GUI 
 arandr
-#arc-gtk-theme-eos
+arc-gtk-theme-eos
 arc-x-icons-theme
 #archlinux-xdg-menu
 bspwm
@@ -15,11 +15,8 @@ file-roller
 #i3lock
 #lightdm
 #lightdm-slick-greeter
-#lxappearance-gtk3
-#lxsession
+lxappearance-gtk3
 nitrogen
-#picom
-#polybar
 rofi
 scrot
 sxhkd
@@ -31,10 +28,7 @@ tumbler
 #ttf-nerd-fonts-symbols
 xbindkeys
 xclip
-#xcursor-neutral
 xed
-xfce4-session
-xfce4-settings
 xf86-video-intel
 xf86-video-nouveau
 xf86-video-qxl
