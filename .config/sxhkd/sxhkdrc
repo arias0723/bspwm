@@ -4,13 +4,11 @@
 
 # terminal emulator
 super + Return
-	xfce4-terminal
+	urxvt
 
 # program launcher
 super + @space
-	rofi -modi drun -show drun -line-padding 4 \
-                -columns 2 -padding 50 -hide-scrollbar -terminal zsh \
-                -show-icons -drun-icon-theme "Arc-X-D" -font "Droid Sans Regular 10"
+	rofi -show drun -theme applications -show-icons -monitor -1
 
 # make sxhkd reload its configuration files:
 super + Escape

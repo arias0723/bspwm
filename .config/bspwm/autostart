@@ -1,5 +1,5 @@
 # for urxvt
-#xrdb ~/.Xresources
+xrdb ~/.Xresources
 lxsession &
 
 # gnome keyring for ssh password/etc...

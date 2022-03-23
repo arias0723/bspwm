@@ -57,7 +57,6 @@ pulseaudio
 pavucontrol
 
 # Utils
-alacritty
 bat
 firefox
 fzf
@@ -66,6 +65,7 @@ jq
 lsd
 neovim
 pacman-contrib
+rxvt-unicode
 tmux
 wget
 yay

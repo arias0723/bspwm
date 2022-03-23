@@ -13,13 +13,14 @@ yay -S --nodiffmenu --noremovemake --answerclean All --noconfirm picom-ibhagwan-
 
 # WM cfg
 cp -R .config/. ~/.config/
-cp -R .screenlayout ~/
-cp -R wallpapers/. ~/Pictures
+cp -R resources/.screenlayout ~/
+cp -R resources/.Xresources.d ~/
+cp -R resources/wallpapers/. ~/Pictures
 cp -R resources/fonts/. ~/.local/share/fonts
-cp .xinitrc ~/
-cp .gtkrc-2.0 ~/
-cp .tmux.conf ~/
-cp .tmux.conf.local ~/
+cp resources/.xinitrc ~/
+cp resources/.gtkrc-2.0 ~/
+cp resources/.tmux.conf ~/
+cp resources/.tmux.conf.local ~/
 chmod -R +x ~/.config/bspwm
 chmod -R +x ~/.config/polybar/scripts
 chmod -R +x ~/.screenlayout
