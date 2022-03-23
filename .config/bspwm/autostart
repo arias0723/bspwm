@@ -1,6 +1,7 @@
 # for urxvt
 xrdb ~/.Xresources
-lxsession &
+
+startxfce4
 
 # gnome keyring for ssh password/etc...
 #eval $(/usr/bin/gnome-keyring-daemon --start --components=pkcs11,secrets,ssh)
