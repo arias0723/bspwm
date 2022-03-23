@@ -9,7 +9,7 @@ mkdir ~/Pictures
 
 # Install base packages
 sudo pacman -Syu --needed --noconfirm $INSTALL_PACKAGES
-yay -S --nodiffmenu --noremovemake --answerclean All --noconfirm picom-ibhagwan-git polybar
+yay -S --nodiffmenu --noremovemake --answerclean All --noconfirm picom-ibhagwan-git polybar sublime-text-3
 
 # WM cfg
 cp -R .config/. ~/.config/
@@ -38,5 +38,4 @@ sudo usermod --shell /usr/bin/zsh root
 # Misc
 sudo systemctl enable NetworkManager.service
 sudo fc-cache -f -v
-dbus-launch dconf load / < xed.dconf
 

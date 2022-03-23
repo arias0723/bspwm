@@ -7,11 +7,8 @@ bspwm
 capitaine-cursors
 dex
 dunst
-#endeavouros-xfce4-terminal-colors
-#eos-skel-ce-bspwm
 feh
 file-roller
-#gtk-engine-murrine
 #i3lock
 #lightdm
 #lightdm-slick-greeter
@@ -28,7 +25,6 @@ tumbler
 #ttf-nerd-fonts-symbols
 xbindkeys
 xclip
-xed
 xf86-video-intel
 xf86-video-nouveau
 xf86-video-qxl
