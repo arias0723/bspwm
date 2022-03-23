@@ -27,11 +27,20 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 # Set display from arandr saved script
 sh ~/.screenlayout/layout.sh &
 
+# Low battery notifier
+~/.config/bspwm/scripts/low_bat_notifier.sh
+
 # sxhkd for keyboard shortcuts
 pgrep -x sxhkd > /dev/null || sxhkd &
 
 # notification daemon
 pgrep -x dunst > /dev/null || dunst &
+
+# Dex
+#dex -a -s /etc/xdg/autostart/:~/.config/autostart/
+
+# Network Applet
+#nm-applet --indicator &
 
 # compositor
 pgrep -x picom > /dev/null || picom &

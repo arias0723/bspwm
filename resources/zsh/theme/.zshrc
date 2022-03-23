@@ -57,7 +57,6 @@ echo -en "\e]2;Parrot Terminal\a"
 preexec () { print -Pn "\e]0;$1 - Parrot Terminal\a" }
 
 source ~/powerlevel10k/powerlevel10k.zsh-theme
-source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # CUSTOM ALIASES
 alias cat='/bin/bat'

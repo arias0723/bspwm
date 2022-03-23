@@ -2,7 +2,7 @@
 ! URxvt configs
 ! ------------------------------------------------------------------------------
 ! font spacing
-!URxvt*letterSpace:	   0
+URxvt*letterSpace:	     -1
 URxvt.lineSpace:	     0
 
 ! general settings

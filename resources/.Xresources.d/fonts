@@ -12,6 +12,11 @@
 !URxvt.font: xft: Fira Code:style=Bold:size=10
 !URxvt.font: xft: Terminus:style=Bold:size=9
 !URxvt.font: xft: JetBrainsMono Nerd Font:style=Medium:size=9
-URxvt.font: xft:JetBrainsMono Nerd Font Mono:size=9:antialias=true:autohint=true
-!URxvt.font: xft: Iosevka:style=Medium:size=9, xft:Noto Color Emoji:size=10
-!URxvt.font: xft: JetBrainsMono Nerd Font:style=Medium:pixelsize=12:antialias=true:autohint=true
+!URxvt.font: xft:JetBrainsMono Nerd Font:size=9:antialias=true:autohint=true
+!URxvt.font: xft:JetBrainsMono Nerd Font Mono:size=9:antialias=true:autohint=true
+!URxvt.font: xft:Material Icons:size=9:antialias=true::autohint=true
+!URxvt.font: xft:Iosevka Nerd Font:style=Bold:size=11:antialias=true:autohint=true
+!URxvt.font: xft:Iosevka Term:style=normal:weight=bold:pixelsize=12:antialias=true:hinting=true
+!URxvt.font: xft:JetBrainsMono Nerd Font:style=Medium:pixelsize=12:antialias=true:autohint=true
+!URxvt.font: xft:SourceCodePro+Powerline+Awesome Regular:size=9:antialias=true:autohint=true
+URxvt.font: xft:MesloLGS NF:size=10:antialias=true:autohint=true
