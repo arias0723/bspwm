@@ -380,4 +380,4 @@ font-7 = JetBrainsMono Nerd Font:antialias=true:hinting=true:style=Medium:pixels
 
 modules-left = apps sep sep ;running_program
 modules-center = layout sep bspwm sep tabbed
-modules-right = updates sep sep netstatus sep mic sep pulseaudio sep sep battery sep date sep sep powerbutton
+modules-right = updates sep sep netstatus sep pulseaudio sep sep battery sep date sep sep powerbutton
